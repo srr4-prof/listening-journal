@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listening Journal — Radical Sonics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="cover" id="top">
+  <div class="cover-top"><span id="cover-publisher"></span><span id="cover-semester"></span></div>
+  <h1 class="cover-title" id="cover-title"></h1>
+  <div class="cover-foot"><span id="cover-count">&nbsp;</span><a class="open" href="#contents">Open the book</a></div>
+</header>
+
+<main class="contents" id="contents">
+  <div class="contents-head">
+    <h2>Contents</h2>
+    <div class="search">
+      <label for="q">Search titles and entries</label>
+      <input id="q" type="search" autocomplete="off" placeholder="rain, bells, silence…">
+    </div>
+  </div>
+  <nav class="alphabet" id="alphabet" aria-label="Start reading at a letter"></nav>
+  <div class="status-row"><p class="status" id="status" aria-live="polite"></p></div>
+  <div id="toc"></div>
+  <footer class="colophon">
+    <span id="colophon-text"></span>
+    <span class="colophon-links"><button type="button" id="open-contrib" hidden>Contributors</button><button type="button" id="random">Open a random entry</button></span>
+  </footer>
+</main>
+
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="entry-title">
+  <article class="page" tabindex="-1" id="page">
+    <div class="running-head">
+      <span id="rh-book"></span>
+      <button type="button" id="close">Back to contents</button>
+    </div>
+    <div class="entry">
+      <h1 id="entry-title" tabindex="-1"></h1>
+      <div class="body" id="entry-body"></div>
+    </div>
+    <div class="page-foot">
+      <button type="button" id="prev"><span>Previous</span><b id="prev-title"></b></button>
+      <div class="folio" id="folio"></div>
+      <button type="button" id="next"><span>Next</span><b id="next-title"></b></button>
+    </div>
+  </article>
+</div>
+
+<div class="reader" id="contrib" role="dialog" aria-modal="true" aria-labelledby="contrib-title">
+  <article class="page" tabindex="-1" id="contrib-page">
+    <div class="running-head">
+      <span id="contrib-rh"></span>
+      <button type="button" id="contrib-close">Back to contents</button>
+    </div>
+    <div class="entry">
+      <h1 id="contrib-title" tabindex="-1">Contributors</h1>
+      <div id="contrib-body"></div>
+    </div>
+    <div class="contrib-foot" id="contrib-foot"></div>
+  </article>
+</div>
+
+<div id="announcer" class="visually-hidden" aria-live="polite"></div>
+
+<script src="settings.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
