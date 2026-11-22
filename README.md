@@ -1,6 +1,6 @@
 # Listening Journal — Radical Sonics
 
-*Encyclopedia of Sounds*, 2025-present. A searchable A–Z website of student listening journal entries, set like a book.
+*Encyclopedia of Sounds*, 2025-present. A searchable A–Z website of short descriptions of sounds, set like a book.
 
 ## What's in this repository
 
